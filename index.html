@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-empty"></div>
+        <div class="right-widgets">
+            <div class="tab-widget">
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="about">About Me</button>
+                    <button class="tab-button" data-tab="experience">Experiences</button>
+                    <button class="tab-button" data-tab="recommended">Recommended</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="about">
+                        <p>Hello! I'm Dave, your sales rep here from Salesforce. I've been working at this awesome company for 3 years now...</p>
+                    </div>
+                    <div class="tab-pane" id="experience">
+                        <p>I have 10 years of experience in sales, working with clients from multiple industries...</p>
+                    </div>
+                    <div class="tab-pane" id="recommended">
+                        <p>Dave is highly recommended by his peers and clients for his professionalism and expertise...</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+
+            <div class="gallery-widget">
+                <div class="gallery-header">
+                    <button class="gallery-tab-button active">Gallery</button>
+                    <div class="gallery-controls">
+                        <button class="add-image">+ ADD IMAGE</button>
+                        <div class="nav-buttons">
+                            <button class="nav-button">&larr;</button>
+                            <button class="nav-button">&rarr;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-gallery">
+                    <img src="image.jpeg" alt="Image 1" class="gallery-image">
+                    <img src="image.jpeg" alt="Image 2" class="gallery-image">
+                    <img src="image.jpeg" alt="Image 3" class="gallery-image">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2f353f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+}
+
+.left-empty {
+    flex: 1;
+    display: none; /* Hidden by default for responsiveness */
+}
+
+.right-widgets {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tab-widget, .gallery-widget {
+    background-color: #333941;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 7px 7px 7px 7px;
+    border-radius: 15px;
+}
+
+.tab-button {
+    flex: 1;
+    background-color: #1d2128;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #3c424c;
+}
+
+.tab-content {
+    margin-top: 20px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.gallery-widget {
+    background-color: #333941;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gallery-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.add-image {
+    background-color: #3c424c;
+    border: none;
+    padding: 15px 15px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-image:hover {
+    background-color: #4e5661;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: #3c424c;
+    border: none;
+    padding: 20px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #4e5661;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns for the images */
+    grid-gap: 10px;
+    height: 200px; /* Set the height of the gallery */
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Adds a 20px gap between the images */
+    margin-top: 20px;
+}
+
+.gallery-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media (min-width: 768px) {
+    .left-empty {
+        display: block; /* Display only on larger screens */
+    }
+}
+.gallery-tab-button {
+    background-color: black;
+    border: none;
+    padding-top: 12px; /* Smaller padding */
+    padding-bottom: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 14px;    /* Smaller font size */
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-tab-button.active {
+    background-color: #3c424c;
+}
+
+.gallery-tab-button:hover {
+    background-color: #4e5661;
+}
+/* General Styling */
+/* General Styling */
+/* General Styling */
+.tab-widget {
+    width: 100%;
+    background-color: #1d2128;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    position: relative; /* Needed for the hover effect */
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.tab-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px; /* The height of the sliding underline */
+    width: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* Underline color */
+    transition: width 0.4s ease; /* Smooth left-to-right transition */
+}
+
+.tab-button:hover::before {
+    width: 100%; /* Expands from left to right */
+}
+
+.tab-button:hover {
+    color: #bbbbbb; /* Slight color change on hover */
+}
+
+.tab-button.active {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight the clicked button with a background shade */
+    border-radius: 5px;
+}
+
+.tab-button.active::before {
+    width: 100%; /* Keep the underline full for the active button */
+    background-color: rgba(255, 255, 255, 0.4); /* Darker shade for the active state */
+}
+
+.tab-content {
+    position: relative;
+    width: 100%;
+}
+
+.tab-pane {
+    display: none;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(50px); /* Start offscreen for smooth transition */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade-in and slide-in effect */
+}
+
+.tab-pane.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0); /* Slide in from the right */
+}
+
+
